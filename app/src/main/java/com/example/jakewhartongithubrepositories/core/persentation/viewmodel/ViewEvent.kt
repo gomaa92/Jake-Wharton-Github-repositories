@@ -1,0 +1,3 @@
+package com.example.jakewhartongithubrepositories.core.persentation.viewmodel
+
+interface ViewEvent

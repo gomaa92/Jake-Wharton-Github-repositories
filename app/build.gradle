@@ -1,19 +1,25 @@
 plugins {
     id 'com.android.application'
-    id 'org.jetbrains.kotlin.android'
+    id 'kotlin-android'
+    id 'kotlin-kapt'
+    id 'dagger.hilt.android.plugin'
+    id 'androidx.navigation.safeargs.kotlin'
+    id 'kotlin-parcelize'
 }
+
+apply from: 'dependencies.gradle'
 
 android {
     namespace 'com.example.jakewhartongithubrepositories'
-    compileSdk 32
+    compileSdk 33
 
     defaultConfig {
         applicationId "com.example.jakewhartongithubrepositories"
         minSdk 19
-        targetSdk 32
+        targetSdk 33
         versionCode 1
         versionName "1.0"
-
+        multiDexEnabled true
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
@@ -30,15 +36,25 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+    buildFeatures {
+        viewBinding true
+    }
 }
 
 dependencies {
 
-    implementation 'androidx.core:core-ktx:1.7.0'
-    implementation 'androidx.appcompat:appcompat:1.5.1'
-    implementation 'com.google.android.material:material:1.7.0'
-    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
-    testImplementation 'junit:junit:4.13.2'
-    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+    implementation ui.values()
+    implementation lifeCycle.values()
+    implementation hiltDependencieyInjection.values()
+    implementation navigation.values()
+    implementation ktx.values()
+    implementation room.values()
+    annotationProcessor annotationProcessor.values()
+    kapt kaptDI.values()
+    implementation gsonParser.values()
+    implementation retrofitNetworking.values()
+    implementation 'com.scwang.smartrefresh:SmartRefreshLayout:1.1.3'
+}
+kapt {
+    correctErrorTypes true
 }
