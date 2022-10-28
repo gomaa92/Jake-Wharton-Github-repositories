@@ -8,4 +8,12 @@
         android:id="@+id/listRepositories"
         android:name="com.example.jakewhartongithubrepositories.feature.listrepositories.presentation.view.fragment.ListRepositoriesFragment"
         tools:layout="@layout/fragment_list_repositories" />
+    <fragment
+        android:id="@+id/repositoryDetails"
+        android:name="com.example.jakewhartongithubrepositories.feature.repositorydetails.RepositoryDetailsFragment"
+        tools:layout="@layout/fragment_repository_details">
+        <argument
+            android:name="repositoryDetails"
+            app:argType="com.example.jakewhartongithubrepositories.feature.listrepositories.data.model.RepositoryEntity" />
+    </fragment>
 </navigation>

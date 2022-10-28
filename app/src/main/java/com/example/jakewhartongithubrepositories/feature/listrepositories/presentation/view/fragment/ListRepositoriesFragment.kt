@@ -2,13 +2,15 @@ package com.example.jakewhartongithubrepositories.feature.listrepositories.prese
 
 import android.os.Bundle
 import android.view.View
-import android.widget.Toast
+import androidx.core.os.bundleOf
 import androidx.fragment.app.viewModels
 import com.example.jakewhartongithubrepositories.R
 import com.example.jakewhartongithubrepositories.core.data.local.RepositoryDao
+import com.example.jakewhartongithubrepositories.core.persentation.navigation.navigateWithId
 import com.example.jakewhartongithubrepositories.core.persentation.screens.BaseFragment
 import com.example.jakewhartongithubrepositories.core.persentation.viewbinding.viewBinding
 import com.example.jakewhartongithubrepositories.core.utils.MAX_PER_PAGE
+import com.example.jakewhartongithubrepositories.core.utils.REPOSITORY_DETAILS
 import com.example.jakewhartongithubrepositories.core.utils.showDialog
 import com.example.jakewhartongithubrepositories.core.utils.showSnack
 import com.example.jakewhartongithubrepositories.databinding.FragmentListRepositoriesBinding
@@ -47,7 +49,7 @@ class ListRepositoriesFragment :
 
     private fun initRecyclerView() {
         adapter = ListRepositoryAdapter {
-            Toast.makeText(requireContext(), "clicked", Toast.LENGTH_SHORT).show()
+            navigateWithId(R.id.repositoryDetails, bundleOf(REPOSITORY_DETAILS to it))
         }
         binding.repositoriesRv.adapter = adapter
     }

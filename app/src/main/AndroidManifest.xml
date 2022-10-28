@@ -17,7 +17,7 @@
         android:theme="@style/Theme.JakeWhartonGithubRepositories"
         tools:targetApi="31">
         <activity
-            android:name=".MainActivity"
+            android:name=".feature.MainActivity"
             android:configChanges="orientation|screenSize|screenLayout|keyboardHidden"
             android:exported="true">
             <intent-filter>

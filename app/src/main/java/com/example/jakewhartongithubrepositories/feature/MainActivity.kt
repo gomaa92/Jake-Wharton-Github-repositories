@@ -1,7 +1,8 @@
-package com.example.jakewhartongithubrepositories
+package com.example.jakewhartongithubrepositories.feature
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import com.example.jakewhartongithubrepositories.R
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
