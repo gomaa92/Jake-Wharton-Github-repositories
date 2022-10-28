@@ -10,7 +10,7 @@ class ListRepositoryLocalDataSourceImpl @Inject constructor(private val reposito
         repositoryDao.insertAll(repositories)
     }
 
-    override suspend fun getAllRepository(page: Int): List<RepositoryEntity> {
+    override suspend fun getAllRepository(): List<RepositoryEntity> {
         return repositoryDao.getAllRepositories()
     }
 }

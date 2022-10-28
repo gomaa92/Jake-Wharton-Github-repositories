@@ -4,5 +4,5 @@ import com.example.jakewhartongithubrepositories.feature.listrepositories.data.m
 
 interface ListRepositoryLocalDataSource {
     suspend fun insertRepository(repositories: List<RepositoryEntity>)
-    suspend fun getAllRepository(page: Int): List<RepositoryEntity>
+    suspend fun getAllRepository(): List<RepositoryEntity>
 }

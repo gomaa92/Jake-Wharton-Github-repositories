@@ -20,7 +20,7 @@ class ListRepositoriesRepositoryImpl @Inject constructor(
         return if (isOnline) {
             getRepositoriesFromRemote(page)
         } else {
-            getRepositoriesFromDB(page)
+            getRepositoriesFromDB()
         }
     }
 
@@ -32,7 +32,7 @@ class ListRepositoriesRepositoryImpl @Inject constructor(
         return remoteDataSource.getRepositories(page)
     }
 
-    private suspend fun getRepositoriesFromDB(page: Int): NetworkResponse<List<RepositoryEntity>> {
-        return NetworkResponse.SuccessLocal(localDataSource.getAllRepository(page))
+    private suspend fun getRepositoriesFromDB(): NetworkResponse<List<RepositoryEntity>> {
+        return NetworkResponse.SuccessLocal(localDataSource.getAllRepository())
     }
 }
