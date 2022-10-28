@@ -18,6 +18,7 @@ ext {
     def gsonConverter = "2.9.0"
     def loggingInterceptor = "4.9.1"
     def roomVersion = "2.4.2"
+    def mockitoVersion = " 4.2.0"
 
     coroutines = [
             "coroutinesCore"   : "org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutinesCoreVersion",
@@ -93,5 +94,9 @@ ext {
 
             "room"   : "androidx.room:room-runtime:$roomVersion",
             "roomKtx": "androidx.room:room-ktx:$roomVersion"
+    ]
+    mock = [
+            "mockitoKotlin": "org.mockito.kotlin:mockito-kotlin:4.0.0",
+            "mock"         : "org.mockito:mockito-core:$mockitoVersion",
     ]
 }

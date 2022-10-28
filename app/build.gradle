@@ -50,11 +50,15 @@ dependencies {
     implementation ktx.values()
     implementation room.values()
     implementation glideImageLoader.values()
+    testImplementation testImpUnitTest.values()
+    testImplementation androidTestImpUnitTest.values()
     annotationProcessor annotationProcessor.values()
+    implementation mock.values()
     kapt kaptDI.values()
     implementation gsonParser.values()
     implementation retrofitNetworking.values()
     implementation 'com.scwang.smartrefresh:SmartRefreshLayout:1.1.3'
+    testImplementation "org.robolectric:robolectric:4.7.3"
 }
 kapt {
     correctErrorTypes true

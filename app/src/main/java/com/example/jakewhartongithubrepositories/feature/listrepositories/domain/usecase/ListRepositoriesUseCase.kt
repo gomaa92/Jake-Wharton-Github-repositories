@@ -6,7 +6,7 @@ import com.example.jakewhartongithubrepositories.feature.listrepositories.domain
 import com.example.jakewhartongithubrepositories.feature.listrepositories.presentation.viewmodel.ListRepositoriesContract.ListRepositoriesResult
 import javax.inject.Inject
 
-class ListRepositoriesUseCase @Inject constructor(private val repository: ListRepositoriesRepository) :
+open class ListRepositoriesUseCase @Inject constructor(private val repository: ListRepositoriesRepository) :
     SuspendableUseCase<Int, ListRepositoriesResult> {
     override suspend fun execute(input: Int): ListRepositoriesResult {
         return when (val result = repository.getRepositories(input)) {
