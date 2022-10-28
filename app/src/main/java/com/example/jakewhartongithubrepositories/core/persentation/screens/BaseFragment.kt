@@ -10,13 +10,13 @@ import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
 import com.example.basemvi.core.persentation.viewmodel.*
 import com.example.jakewhartongithubrepositories.core.persentation.viewmodel.Action
-import com.example.jakewhartongithubrepositories.core.persentation.viewmodel.Result
+import com.example.jakewhartongithubrepositories.core.persentation.viewmodel.BaseResult
 import com.example.jakewhartongithubrepositories.core.persentation.viewmodel.ViewEvent
 import com.example.jakewhartongithubrepositories.core.persentation.viewmodel.ViewState
 import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
 
-abstract class BaseFragment<STATE : ViewState, EVENT : ViewEvent, ACTION : Action, RESULT : Result>(
+abstract class BaseFragment<STATE : ViewState, EVENT : ViewEvent, ACTION : Action, RESULT : BaseResult>(
     @LayoutRes layoutId: Int,
 ) : Fragment(layoutId) {
 

@@ -49,6 +49,7 @@ dependencies {
     implementation navigation.values()
     implementation ktx.values()
     implementation room.values()
+    implementation glideImageLoader.values()
     annotationProcessor annotationProcessor.values()
     kapt kaptDI.values()
     implementation gsonParser.values()

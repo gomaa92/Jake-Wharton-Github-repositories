@@ -31,6 +31,10 @@ abstract class BaseListAdapter<T>(callback: DiffUtil.ItemCallback<T> = BaseDiffC
     abstract fun createBinding(parent: ViewGroup, viewType: Int): ViewBinding
 
     protected abstract fun bind(binding: ViewBinding, position: Int)
+
+    fun addItems(items :List<T>){
+        this.currentList.addAll(items)
+    }
 }
 
 open class BaseDiffCallback<T> : DiffUtil.ItemCallback<T>() {

@@ -10,7 +10,7 @@ import com.example.jakewhartongithubrepositories.feature.listrepositories.data.m
 interface RepositoryDao {
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    suspend fun insertAll(repository: List<RepositoryEntity>)
+    suspend fun insertAll(repositories: List<RepositoryEntity>)
 
     @Query("SELECT * FROM `repository-entity`")
     suspend fun getAllRepositories(): List<RepositoryEntity>

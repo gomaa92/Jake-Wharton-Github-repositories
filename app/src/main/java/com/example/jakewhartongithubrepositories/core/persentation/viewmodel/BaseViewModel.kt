@@ -3,7 +3,7 @@ package com.example.basemvi.core.persentation.viewmodel
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.jakewhartongithubrepositories.core.persentation.viewmodel.Action
-import com.example.jakewhartongithubrepositories.core.persentation.viewmodel.Result
+import com.example.jakewhartongithubrepositories.core.persentation.viewmodel.BaseResult
 import com.example.jakewhartongithubrepositories.core.persentation.viewmodel.ViewEvent
 import com.example.jakewhartongithubrepositories.core.persentation.viewmodel.ViewState
 import kotlinx.coroutines.channels.Channel
@@ -17,7 +17,7 @@ import kotlinx.coroutines.launch
  * [Action] represents the action of the view to be handled by [handle]
  * [Result] results returned from Use cases to be reduced in viewMode class using [reduce]
  */
-abstract class BaseViewModel<STATE : ViewState, EVENT : ViewEvent, ACTION : Action, RESULT : Result>(
+abstract class BaseViewModel<STATE : ViewState, EVENT : ViewEvent, ACTION : Action, RESULT : BaseResult>(
     /**
      * instance of [ViewState], holds the initial state of the view
      */

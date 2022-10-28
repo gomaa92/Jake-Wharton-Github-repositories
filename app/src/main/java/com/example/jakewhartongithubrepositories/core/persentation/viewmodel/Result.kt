@@ -1,3 +1,3 @@
 package com.example.jakewhartongithubrepositories.core.persentation.viewmodel
 
-interface Result
+interface BaseResult
